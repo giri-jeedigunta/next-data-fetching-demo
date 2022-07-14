@@ -1,12 +1,13 @@
 // client side rendered
+import List from '../components/list';
 import { useEffect, useState } from 'react';
-import { YOUR_API_URL } from '../lib/api';
+import { MOCK_API } from '../config/constants';
 
 export default function ClientSideRendered() {
   const [state, setState] = useState([]);
 
   async function getData() {
-    const res = await fetch(YOUR_API_URL);
+    const res = await fetch(MOCK_API);
     const data = await res.json();
     setState(data);
   }
@@ -18,9 +19,7 @@ export default function ClientSideRendered() {
   return (
     <>
       <h2>CSR - Todos</h2>
-      {state.map((e) => (
-        <ol><li key={e.id}>{e.name}</li></ol>
-      ))}
+      <List data={state}/>
     </>
   );
 }

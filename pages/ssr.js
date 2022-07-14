@@ -1,19 +1,18 @@
 // server side rendering
-import { YOUR_API_URL } from '../lib/api';
+import List from '../components/list';
+import { MOCK_API } from '../config/constants';
 
 export default function ServerSideRendered({ data }) {
   return (
     <>
       <h2>SSR - Todos</h2>
-      <ol>{data.map((e) => (
-        <li key={e.id}>{e.name}</li>
-      ))}</ol>
+      <List data={data}/>
     </>
   );
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(YOUR_API_URL);
+  const res = await fetch(MOCK_API);
   const data = await res.json();
 
   return {

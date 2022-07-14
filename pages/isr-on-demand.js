@@ -1,13 +1,12 @@
 // incremental static generation
-import { YOUR_API_URL } from '../lib/api';
+import List from '../components/list';
+import { MOCK_API } from '../config/constants';
 
 export default function IncrementalStaticRegenerationOnDemand({ data }) {
   return (
     <>
       <h2>ISR on demand - Todos</h2>
-      <ol>{data.map((e) => (
-        <li key={e.id}>{e.name}</li>
-      ))}</ol>
+      <List data={data}/>
     </>
   );
 }
@@ -16,7 +15,7 @@ export default function IncrementalStaticRegenerationOnDemand({ data }) {
 // It may be called again, on a serverless function, if
 // the api endpoint e.g. api/revalidate get's pinged.
 export async function getStaticProps() {
-  const res = await fetch(YOUR_API_URL);
+  const res = await fetch(MOCK_API);
   const data = await res.json();
 
   return {

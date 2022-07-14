@@ -1,13 +1,12 @@
 // static site generation
-import { YOUR_API_URL } from '../lib/api';
+import List from '../components/list';
+import { MOCK_API } from '../config/constants';
 
 export default function StaticSiteGeneration({ data }) {
   return (
     <>
     <h2>SSG - Todos</h2>
-      <ol>{data.map((e) => (
-        <li key={e.id}>{e.name}</li>
-      ))}</ol>
+    <List data={data}/>
     </>
   );
 }
@@ -16,7 +15,7 @@ export default function StaticSiteGeneration({ data }) {
 // It won't be called on client-side, so you can even do
 // direct database queries.
 export async function getStaticProps() {
-  const res = await fetch(YOUR_API_URL);
+  const res = await fetch(MOCK_API);
   const data = await res.json();
 
   return {
