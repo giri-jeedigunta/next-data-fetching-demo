@@ -2,6 +2,9 @@
 
 A simple demo to showcase different rendering options in NextJS.
 
+- There are pros and cons in each approach. Some of the top citerieas are captured in the simple chart below. 
+- These rendering / data fetching options can be a mix within the same project. 
+
 ![8onh7r5sxmss9f87k726](https://user-images.githubusercontent.com/2689410/179026796-141da097-58e1-45fc-b9df-a98429e06cf6.png)
 
 
@@ -15,10 +18,15 @@ Note: if yo do ```yarn dev``` you will not see the differences :) between SSR vs
 
 
 ##  Rendering examples:
+
 SSR - http://localhost:3000/ssr
+
 SSG - http://localhost:3000/ssg
+
 ISR - http://localhost:3000/isr
+
 CSR - http://localhost:3000/csr
+
 
 Read more: https://nextjs.org/docs/basic-features/data-fetching/overview
 
