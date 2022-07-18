@@ -9,13 +9,23 @@ A simple demo to showcase different rendering options in NextJS.
 yarn install
 yarn build
 yarn start
-
 ```
 
 Note: if yo do ```yarn dev``` you will not see the differences :) between SSR vs SSG vs ISR.
 
-##  Slug example:
+
+##  Rendering examples:
+SSR - http://localhost:3000/ssr
+SSG - http://localhost:3000/ssg
+ISR - http://localhost:3000/isr
+CSR - http://localhost:3000/csr
+
+Read more: https://nextjs.org/docs/basic-features/data-fetching/overview
+
+##  Slug / Dynamic routing example:
 http://localhost:3000/slug-example/hello-world
+
+Read more: https://nextjs.org/docs/routing/dynamic-routes
 
 ## References: 
 
