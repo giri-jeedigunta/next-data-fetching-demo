@@ -12,8 +12,13 @@ yarn start
 
 ```
 
-Note: if yo do ```yarn dev``` you will not see the differences =)
+Note: if yo do ```yarn dev``` you will not see the differences :) between SSR vs SSG vs ISR.
 
-References: 
+##  Slug example:
+http://localhost:3000/slug-example/hello-world
+
+## References: 
+
 https://dev.to/pahanperera/visual-explanation-and-comparison-of-csr-ssr-ssg-and-isr-34ea
+
 https://morioh.com/p/27c75dc881bb
