@@ -5,7 +5,7 @@ import { MOCK_API } from '../config/constants';
 export default function StaticSiteGeneration({ data }) {
   return (
     <>
-    <h2>SSG - Todos</h2>
+    <h2>SSG - Random countries list</h2>
     <List data={data}/>
     </>
   );

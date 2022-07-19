@@ -18,7 +18,7 @@ export default function ClientSideRendered() {
 
   return (
     <>
-      <h2>CSR - Todos</h2>
+      <h2>CSR - Random countries list</h2>
       <List data={state}/>
     </>
   );

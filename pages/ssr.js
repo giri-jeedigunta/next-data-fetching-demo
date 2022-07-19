@@ -5,7 +5,7 @@ import { MOCK_API } from '../config/constants';
 export default function ServerSideRendered({ data }) {
   return (
     <>
-      <h2>SSR - Todos</h2>
+      <h2>SSR - Random countries list</h2>
       <List data={data}/>
     </>
   );

@@ -2,18 +2,23 @@
 import List from '../components/list';
 import { MOCK_API } from '../config/constants';
 
-export default function IncrementalStaticRegenerationOnDemand({ data }) {
+const forceRevalidate = async () => {
+  await fetch('/api/revalidate');
+  window.location.reload()
+}
+
+export default function IncrementalStaticRegeneration({ data }) {
   return (
     <>
-      <h2>ISR on demand - Todos</h2>
+      <h2>ISR on demand - Random countries list</h2>
+      <button onClick={() => forceRevalidate()}>Revalidate On-demand when you click...</button>
+      <p className='red'><i>Note: Page will be re-loaded automatically.</i></p>
       <List data={data}/>
+
     </>
   );
 }
 
-// This function gets called at build time on server-side.
-// It may be called again, on a serverless function, if
-// the api endpoint e.g. api/revalidate get's pinged.
 export async function getStaticProps() {
   const res = await fetch(MOCK_API);
   const data = await res.json();
@@ -22,5 +27,10 @@ export async function getStaticProps() {
     props: {
       data, // will be passed to the page component as props
     },
+
+    // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every second
+    revalidate: 60, // In seconds
   };
 }

@@ -5,7 +5,7 @@ import { MOCK_API } from '../config/constants';
 export default function IncrementalStaticRegeneration({ data }) {
   return (
     <>
-      <h2>ISR - Todos</h2>
+      <h2>ISR - Random countries list</h2>
       <List data={data}/>
     </>
   );

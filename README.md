@@ -30,12 +30,20 @@ CSR - http://localhost:3000/csr
 
 Read more: https://nextjs.org/docs/basic-features/data-fetching/overview
 
+##  ISR on-demand example:
+Next.js gives you an option to force re-validate your data on-demand.
+http://localhost:3000/isr-on-demand
+
+Read more: https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration#using-on-demand-revalidation
+
 ##  Slug / Dynamic routing example:
 http://localhost:3000/slug-example/hello-world
 
 Read more: https://nextjs.org/docs/routing/dynamic-routes
 
 ## References: 
+
+Mock API: https://mockapi.io/
 
 https://dev.to/pahanperera/visual-explanation-and-comparison-of-csr-ssr-ssg-and-isr-34ea
 
