@@ -44,7 +44,7 @@ http://localhost:3000/slug-example/hello-world
 Read more: https://nextjs.org/docs/routing/dynamic-routes
 
 ## Vercel: 
-https://vercel.com/giri-jeedigunta/next-data-fetching-demo
+https://next-data-fetching-demo.vercel.app/
 
 ## References: 
 
