@@ -1,4 +1,10 @@
 import Link from 'next/link'
+import styled from 'styled-components'
+
+const BlueLink = styled.a`
+  color: blue;
+  padding: 1.5em 0;
+`
 
 export default function Home() {
   return (
@@ -7,32 +13,32 @@ export default function Home() {
     <ul>
       <li>
         <Link href="/ssr">
-          <a>SSR</a>
+          <BlueLink>SSR</BlueLink>
         </Link>
       </li>
       <li>
         <Link href="/ssg">
-          <a>SSG</a>
+          <BlueLink>SSG</BlueLink>
         </Link>
       </li>
       <li>
         <Link href="/isr">
-          <a>ISR</a>
+          <BlueLink>ISR</BlueLink>
         </Link>
       </li>      
       <li>
         <Link href="/isr-on-demand">
-          <a>ISR On-demand</a>
+          <BlueLink>ISR On-demand</BlueLink>
         </Link>
       </li>            
       <li>
         <Link href="/slug-example/hello-world">
-          <a>SLUG + SSR</a>
+          <BlueLink>SLUG + SSR</BlueLink>
         </Link>
       </li>  
       <li>
         <Link href="/csr">
-          <a>CSR</a>
+          <BlueLink>CSR</BlueLink>
         </Link>
       </li>                 
     </ul>    
